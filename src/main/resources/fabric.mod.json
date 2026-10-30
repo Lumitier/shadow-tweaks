@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "shadowtweaks",
+  "version": "${version}",
+  "name": "Shadow Tweaks",
+  "description": "Client-side control over entity shadows: size, opacity, render distance and color, per entity category.",
+  "authors": [
+    "Lumitier"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/shadow-tweaks",
+    "sources": "https://github.com/Lumitier/shadow-tweaks",
+    "issues": "https://github.com/Lumitier/shadow-tweaks/issues"
+  },
+  "license": "Apache-2.0",
+  "icon": "assets/shadowtweaks/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.lumitier.shadowtweaks.client.ShadowTweaksClient"
+    ],
+    "modmenu": [
+      "com.lumitier.shadowtweaks.config.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    {
+      "config": "shadowtweaks.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.20.1",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "yet_another_config_lib_v3": "*"
+  },
+  "suggests": {
+    "modmenu": "*"
+  }
+}

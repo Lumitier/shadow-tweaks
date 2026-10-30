@@ -1,0 +1,33 @@
+Shadow Tweaks
+Copyright 2026 Lukas
+
+This product includes software developed as part of the Fabric modding
+ecosystem for Minecraft.
+
+--------------------------------------------------------------------------
+Bundled third-party components
+--------------------------------------------------------------------------
+
+The distributed mod JAR bundles the following libraries (via Fabric's
+jar-in-jar mechanism). Their respective licenses apply to those parts:
+
+  MixinExtras (io.github.llamalad7:mixinextras-fabric)
+      Copyright (c) LlamaLad7
+      Licensed under the MIT License.
+      https://github.com/LlamaLad7/MixinExtras
+
+  Quilt Parsers (org.quiltmc.parsers:json, org.quiltmc.parsers:gson)
+      Copyright (c) QuiltMC
+      Licensed under the Apache License, Version 2.0.
+      https://github.com/QuiltMC/quilt-parsers
+
+--------------------------------------------------------------------------
+Acknowledgements
+--------------------------------------------------------------------------
+
+Shadow Tweaks is an independent implementation written against Minecraft
+1.21.11. No source code from any other project was copied or adapted.
+
+The mod respects the vanilla "Entity Shadows" video setting as its top-level
+gate, which is the same setting Sodium Extra exposes. With shadows disabled
+there, Shadow Tweaks intentionally does nothing.

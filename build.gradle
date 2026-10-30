@@ -1,0 +1,81 @@
+plugins {
+	// Loom 1.19.3 verlangt Gradle >= 9.8.0 und baut mit Java 25.
+	// Der Mod-Code selbst bleibt auf Java-Level 21 (siehe unten).
+	id 'fabric-loom' version '1.19.3'
+	id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+	archivesName = project.archives_base_name
+}
+
+repositories {
+	mavenCentral()
+	// YACL - offizieller Maven von isXander.
+	maven { url = 'https://maven.isxander.dev/releases' }
+	// Mod Menu - TerraformersMC.
+	maven { url = 'https://maven.terraformersmc.com/releases/' }
+	// Modrinth-Maven (loest YACL/ModMenu per Projekt/Version-ID auf).
+	exclusiveContent {
+		forRepository { maven { url = 'https://api.modrinth.com/maven' } }
+		filter { includeGroup 'maven.modrinth' }
+	}
+	// QuiltMC: YACL braucht org.quiltmc.parsers (json+gson). Ueber den
+	// Modrinth-Maven kommen diese transitiven Abhaengigkeiten NICHT mit.
+	maven { url = 'https://maven.quiltmc.org/repository/release' }
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	// MixinExtras: Loader liefert es nur im 'development'-Scope, daher explizit
+	// einbinden und via include() ins Jar buendeln.
+	compileOnly "io.github.llamalad7:mixinextras-common:0.5.5"
+	annotationProcessor "io.github.llamalad7:mixinextras-common:0.5.5"
+	include(implementation("io.github.llamalad7:mixinextras-fabric:0.5.5"))
+
+	// Config-UI + Zahnrad in der Mod-Liste.
+	//   yacl    pHWDw3Vc = 3.8.2+1.21.11-fabric
+	//   modmenu cLkYaVuL = 17.0.1
+	modImplementation "maven.modrinth:yacl:pHWDw3Vc"
+	modImplementation "maven.modrinth:modmenu:cLkYaVuL"
+
+	// YACLs Laufzeit-Abhaengigkeit, mitgebuendelt (sonst NoClassDefFoundError
+	// org/quiltmc/parsers/json/gson/GsonWriter beim Start).
+	include(modImplementation("org.quiltmc.parsers:json:0.2.1"))
+	include(modImplementation("org.quiltmc.parsers:gson:0.2.1"))
+}
+
+processResources {
+	inputs.property "version", project.version
+
+	filesMatching("fabric.mod.json") {
+		expand "version": project.version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 21
+}
+
+java {
+	withSourcesJar()
+
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
+}
+
+jar {
+	from("LICENSE") {
+		rename { "${it}_${project.archives_base_name}" }
+	}
+	from("NOTICE") {
+		rename { "${it}_${project.archives_base_name}" }
+	}
+}
