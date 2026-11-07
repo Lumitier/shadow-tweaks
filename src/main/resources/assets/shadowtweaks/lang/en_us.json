@@ -4,21 +4,15 @@
   "shadowtweaks.category.shadows": "Shadows",
   "shadowtweaks.group.appearance": "Appearance",
   "shadowtweaks.group.categories": "Show Shadows For",
-
   "shadowtweaks.warning.shadows_off": "Entity shadows are turned off in your video settings — nothing here will have any effect until you turn them back on. If you use Sodium Extra, check its settings too.",
-
   "shadowtweaks.option.mod_enabled": "Mod Enabled",
   "shadowtweaks.option.mod_enabled.desc": "Toggles the mod on or off. Shadows then look exactly like vanilla.",
-
   "shadowtweaks.option.scale": "Shadow Size",
   "shadowtweaks.option.scale.desc": "Size of every entity shadow. 1.00 is vanilla. 0.00 hides shadows entirely — which is actually cheaper than vanilla, because the whole shadow calculation is skipped. Vanilla caps the result at 32 blocks.",
-
   "shadowtweaks.option.opacity": "Shadow Opacity",
   "shadowtweaks.option.opacity.desc": "How dark shadows are. 1.00 is vanilla, 0.00 makes them invisible.",
-
   "shadowtweaks.option.distance": "Render Distance",
   "shadowtweaks.option.distance.desc": "How far away a shadow stays visible, in blocks. Vanilla fades every shadow out at 16 and that limit is hardcoded — raise it and distant mobs keep their shadow. Costs a little performance, since more entities get shadows at once.",
-
   "shadowtweaks.option.show_players": "Players",
   "shadowtweaks.option.show_players.desc": "Shadows for players, including yourself in third person.",
   "shadowtweaks.option.show_hostile": "Hostile Mobs",
@@ -28,5 +22,7 @@
   "shadowtweaks.option.show_items": "Items and XP Orbs",
   "shadowtweaks.option.show_items.desc": "Shadows for dropped items and experience orbs. Turning this off is the biggest win on a floor full of loot.",
   "shadowtweaks.option.show_other": "Everything Else",
-  "shadowtweaks.option.show_other.desc": "Shadows for everything that is not a mob, player or item — boats, minecarts, armor stands, projectiles, primed TNT."
+  "shadowtweaks.option.show_other.desc": "Shadows for everything that is not a mob, player or item — boats, minecarts, armor stands, projectiles, primed TNT.",
+  "shadowtweaks.group.general": "General",
+  "shadowtweaks.option.shadows_off": "Minecraft's own entity shadows are off - this mod does nothing right now."
 }

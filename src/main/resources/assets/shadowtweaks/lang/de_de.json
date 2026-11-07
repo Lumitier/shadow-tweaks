@@ -4,21 +4,15 @@
   "shadowtweaks.category.shadows": "Schatten",
   "shadowtweaks.group.appearance": "Darstellung",
   "shadowtweaks.group.categories": "Schatten anzeigen für",
-
   "shadowtweaks.warning.shadows_off": "Entity-Schatten sind in deinen Grafikeinstellungen ausgeschaltet — bis du sie wieder anschaltest, hat hier nichts eine Wirkung. Wenn du Sodium Extra nutzt, schau auch dort nach.",
-
   "shadowtweaks.option.mod_enabled": "Mod aktiviert",
   "shadowtweaks.option.mod_enabled.desc": "Schaltet die Mod an oder aus. Schatten sehen dann exakt wie in Vanilla aus.",
-
   "shadowtweaks.option.scale": "Schattengröße",
   "shadowtweaks.option.scale.desc": "Größe aller Entity-Schatten. 1,00 ist Vanilla. 0,00 blendet Schatten komplett aus — das ist sogar günstiger als Vanilla, weil die gesamte Schattenberechnung entfällt. Vanilla deckelt das Ergebnis bei 32 Blöcken.",
-
   "shadowtweaks.option.opacity": "Deckkraft",
   "shadowtweaks.option.opacity.desc": "Wie dunkel Schatten sind. 1,00 ist Vanilla, 0,00 macht sie unsichtbar.",
-
   "shadowtweaks.option.distance": "Sichtweite",
   "shadowtweaks.option.distance.desc": "Bis zu welcher Entfernung ein Schatten sichtbar bleibt, in Blöcken. Vanilla blendet jeden Schatten bei 16 aus, und diese Grenze steht fest im Code — höher gesetzt behalten auch entfernte Mobs ihren Schatten. Kostet etwas Leistung, weil mehr Entities gleichzeitig Schatten bekommen.",
-
   "shadowtweaks.option.show_players": "Spieler",
   "shadowtweaks.option.show_players.desc": "Schatten für Spieler, auch für dich selbst in der Dritte-Person-Ansicht.",
   "shadowtweaks.option.show_hostile": "Feindliche Mobs",
@@ -28,5 +22,7 @@
   "shadowtweaks.option.show_items": "Items und XP-Kugeln",
   "shadowtweaks.option.show_items.desc": "Schatten für fallengelassene Items und Erfahrungskugeln. Das abzuschalten bringt auf einem Boden voller Loot am meisten.",
   "shadowtweaks.option.show_other": "Alles andere",
-  "shadowtweaks.option.show_other.desc": "Schatten für alles, was weder Mob, Spieler noch Item ist — Boote, Loren, Rüstungsständer, Projektile, gezündetes TNT."
+  "shadowtweaks.option.show_other.desc": "Schatten für alles, was weder Mob, Spieler noch Item ist — Boote, Loren, Rüstungsständer, Projektile, gezündetes TNT.",
+  "shadowtweaks.group.general": "Allgemein",
+  "shadowtweaks.option.shadows_off": "Minecrafts eigene Entity-Schatten sind aus - die Mod tut gerade nichts."
 }

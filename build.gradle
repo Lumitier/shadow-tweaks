@@ -13,6 +13,9 @@ base {
 }
 
 repositories {
+	// LumiLib - liegt lokal, dorthin veroeffentlicht
+	// mit 'gradlew publishToMavenLocal' im LumiLib-Projekt.
+	mavenLocal()
 	mavenCentral()
 	// YACL - offizieller Maven von isXander.
 	maven { url = 'https://maven.isxander.dev/releases' }
@@ -45,6 +48,11 @@ dependencies {
 	//   modmenu cLkYaVuL = 17.0.1
 	modImplementation "maven.modrinth:yacl:pHWDw3Vc"
 	modImplementation "maven.modrinth:modmenu:cLkYaVuL"
+
+	// LumiLib: NICHT mitbuendeln. Der Nutzer installiert sie
+	// einmal, nicht fuenfmal in fuenf Jars.
+	modCompileOnly "com.lumitier.lumilib:lumilib:1.0.1"
+	modLocalRuntime "com.lumitier.lumilib:lumilib:1.0.1"
 
 	// YACLs Laufzeit-Abhaengigkeit, mitgebuendelt (sonst NoClassDefFoundError
 	// org/quiltmc/parsers/json/gson/GsonWriter beim Start).
