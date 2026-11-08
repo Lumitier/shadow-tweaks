@@ -56,6 +56,16 @@ public final class LumiLibCompat {
 			// oeffnet weiterhin diesen Bildschirm.
 			ShadowTweaksScreen::create,
 			LumiLibCompat::settings));
+
+		// Server-Regeln (LumiLibControlPlugin). Eigener Fang: Mit einer
+		// LumiLib aelter als 1.3.0 gibt es die Methode nicht - dann soll die
+		// Mod trotzdem im Hub stehen, nur eben ohne Server-Steuerung.
+		try {
+			LumiLibApi.onServerRulesChanged(() ->
+				ShadowTweaks.serverDisabled = LumiLibApi.isDisabledByServer(ShadowTweaks.MOD_ID));
+		} catch (Throwable t) {
+			ShadowTweaks.LOGGER.warn("[Shadow Tweaks] LumiLib is too old for server control (needs 1.3.0+).");
+		}
 	}
 
 	/**

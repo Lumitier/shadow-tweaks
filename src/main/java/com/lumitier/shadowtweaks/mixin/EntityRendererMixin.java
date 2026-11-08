@@ -78,7 +78,7 @@ public abstract class EntityRendererMixin {
 	)
 	private float shadowtweaks$radius(float original, EntityRenderState state,
 	                                  MinecraftClient client, World world) {
-		if (!ShadowTweaks.enabled) {
+		if (!ShadowTweaks.active()) {
 			return original;
 		}
 		if (!ShadowTweaks.shows(state.entityType)) {
@@ -101,7 +101,7 @@ public abstract class EntityRendererMixin {
 	)
 	private float shadowtweaks$opacity(float original, EntityRenderState state,
 	                                   MinecraftClient client, World world) {
-		if (!ShadowTweaks.enabled) {
+		if (!ShadowTweaks.active()) {
 			return original;
 		}
 		float o = ShadowTweaks.clamp(ShadowTweaks.opacity, 0.0F, 1.0F);
@@ -132,7 +132,7 @@ public abstract class EntityRendererMixin {
 	)
 	private double shadowtweaks$distance(double original, EntityRenderState state,
 	                                     MinecraftClient client, World world) {
-		if (!ShadowTweaks.enabled) {
+		if (!ShadowTweaks.active()) {
 			return original;
 		}
 		int d = ShadowTweaks.clampInt(ShadowTweaks.distance, 4, 64);

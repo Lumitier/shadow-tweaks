@@ -51,8 +51,8 @@ dependencies {
 
 	// LumiLib: NICHT mitbuendeln. Der Nutzer installiert sie
 	// einmal, nicht fuenfmal in fuenf Jars.
-	modCompileOnly "com.lumitier.lumilib:lumilib:1.0.1"
-	modLocalRuntime "com.lumitier.lumilib:lumilib:1.0.1"
+	modCompileOnly "com.lumitier.lumilib:lumilib:1.3.0"
+	modLocalRuntime "com.lumitier.lumilib:lumilib:1.3.0"
 
 	// YACLs Laufzeit-Abhaengigkeit, mitgebuendelt (sonst NoClassDefFoundError
 	// org/quiltmc/parsers/json/gson/GsonWriter beim Start).
