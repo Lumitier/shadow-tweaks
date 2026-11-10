@@ -49,10 +49,11 @@ dependencies {
 	modImplementation "maven.modrinth:yacl:pHWDw3Vc"
 	modImplementation "maven.modrinth:modmenu:cLkYaVuL"
 
-	// LumiLib: NICHT mitbuendeln. Der Nutzer installiert sie
-	// einmal, nicht fuenfmal in fuenf Jars.
-	modCompileOnly "com.lumitier.lumilib:lumilib:1.3.0"
-	modLocalRuntime "com.lumitier.lumilib:lumilib:1.3.0"
+	// LumiLib: ab dieser Version PFLICHT (fabric.mod.json), aber
+	// NICHT mitbuendeln. Der Nutzer installiert sie einmal, nicht
+	// fuenfmal in fuenf Jars.
+	modCompileOnly "com.lumitier.lumilib:lumilib:1.5.4"
+	modLocalRuntime "com.lumitier.lumilib:lumilib:1.5.4"
 
 	// YACLs Laufzeit-Abhaengigkeit, mitgebuendelt (sonst NoClassDefFoundError
 	// org/quiltmc/parsers/json/gson/GsonWriter beim Start).
