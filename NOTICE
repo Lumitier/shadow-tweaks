@@ -31,3 +31,19 @@ Shadow Tweaks is an independent implementation written against Minecraft
 The mod respects the vanilla "Entity Shadows" video setting as its top-level
 gate, which is the same setting Sodium Extra exposes. With shadows disabled
 there, Shadow Tweaks intentionally does nothing.
+
+--------------------------------------------------------------------------
+Icon
+--------------------------------------------------------------------------
+
+  Lucide
+      Copyright (c) 2026 Lucide Icons and Contributors
+      https://lucide.dev
+      Licensed under the ISC License.
+
+  The mod icon (icon.png) is the Lucide icon "moon-star", placed on a
+  rounded background. The outline itself is unchanged. The full licence
+  text is in LICENSE-Lucide.txt.
+
+  Parts of Lucide derive from the Feather project,
+  Copyright (c) 2013-2023 Cole Bemis, MIT licensed.
